@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure-Vault | Digital Guardian</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <div class="logo">🛡️ Secure-Vault</div>
+            <p class="subtitle">Next-Gen Digital Asset Protection</p>
+        </header>
+
+        <main id="auth-section">
+            <div class="card" id="login-card">
+                <h2>System Unlock</h2>
+                <div class="input-group">
+                    <label for="master-password">Master Password</label>
+                    <input type="password" id="master-password" placeholder="••••••••">
+                </div>
+                <button id="btn-next" class="primary-btn">Continue</button>
+            </div>
+
+            <div class="card hidden" id="otp-card">
+                <h2>Email Verification</h2>
+                <p>An OTP has been sent to your trusted email.</p>
+                <div class="input-group">
+                    <label for="otp-input">Enter 6-digit Code</label>
+                    <input type="text" id="otp-input" maxlength="6" placeholder="000000">
+                </div>
+                <button id="btn-verify" class="primary-btn">Verify & Unlock</button>
+            </div>
+        </main>
+
+        <main id="vault-section" class="hidden">
+            <div class="vault-header">
+                <h2>Your Protected Files</h2>
+                <button class="secondary-btn" id="btn-logout">Lock Vault</button>
+            </div>
+            
+            <div class="file-grid" id="file-list">
+                <!-- Files will be injected here -->
+                <div class="file-item">
+                    <span class="file-icon">📄</span>
+                    <span class="file-name">confidential_report.svault</span>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button class="primary-btn">➕ Protect New File</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Secure-Vault. Zero-Knowledge Architecture.</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
